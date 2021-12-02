@@ -1,0 +1,137 @@
+.hero {
+      background-image: url('../../assets/content/images/20211012_073400.jpg');
+      height: 850px;
+      top: 0;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.diagonal-content {
+      position: relative;
+      margin-top: -150px;
+      background-color: transparent;
+}
+
+.diagonal-content::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      clip-path: polygon(0% 50%, 100% 0%, 100% 50%, 0% 50%);
+      background-color: #F2FDFF;
+      z-index: 1;
+}
+
+.copy {
+      background-color: #F2FDFF;
+      height: 1000px;
+      position: relative;
+      margin-top: 150px;
+      z-index: 2;
+      text-align: right;
+}
+
+.center {
+      display: flex;
+      justify-content: center;
+}
+.boundary {
+      margin-left: 20%;
+      margin-right: 20%;
+      text-align: right;
+}
+
+
+/* // Cards Carousel
+// ---------------------------------------------- */
+.carousel {
+      padding-top: 130px;
+      padding-bottom: 130px;
+}
+
+.icon-cards {
+      position: relative;
+      width: 70vw;
+	height: 40vw;
+      max-width: 380px;
+      max-height: 250px;
+      margin: 0;
+      color: white;
+	perspective: 1000px;
+      transform-origin: center;
+}
+	/* // This is the element that rotates with the animation */
+
+.icon-cards__content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transform: translateZ(-20vw) rotateY(0);
+      animation: carousel 30s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+    
+.step-animation {
+      animation: carousel 20s infinite steps(1) forwards;
+}
+	/* // Individual cards */
+
+.icon-cards__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 70vw;
+      height: 40vw;
+      max-width: 380px;
+      max-height: 250px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.1);
+      border-radius: 6px;
+      transform-origin: center;
+}
+.icon-cards__item:nth-child(1) {
+      background: #109648;
+      transform: rotateY(0) translateZ(20vw);
+}
+.icon-cards__item:nth-child(2) {
+      background: #388697;
+      transform: rotateY(60deg) translateZ(20vw);
+}
+.icon-cards__item:nth-child(3) {
+      background: #642CA9;
+      transform: rotateY(120deg) translateZ(20vw);
+}
+.icon-cards__item:nth-child(4) {
+      background: #AFAFAF;
+      transform: rotateY(180deg) translateZ(20vw);
+}
+.icon-cards__item:nth-child(5) {
+      background: #5D5D5D;
+      transform: rotateY(240deg) translateZ(20vw);
+}
+.icon-cards__item:nth-child(6) {
+      background: #271033;
+      transform: rotateY(300deg) translateZ(20vw);
+}
+
+/* // Carousel animation */
+
+@keyframes carousel {
+	0%,  10%  { transform: translateZ(-5vw) rotateY(0); }
+	15%, 25%  { transform: translateZ(-5vw) rotateY(-60deg); }
+	30%, 40%  { transform: translateZ(-5vw) rotateY(-120deg); }
+	45%, 55% { transform: translateZ(-5vw) rotateY(-180deg); }
+      60%, 70% { transform: translateZ(-5vw) rotateY(-240deg); }
+      75%, 85% { transform: translateZ(-5vw) rotateY(-300deg); }
+      90%, 100% { transform: translateZ(-5vw) rotateY(-360deg); }
+}
+
+.icon-cards-center {
+      display: flex;
+      align-items: center; 
+      justify-content: center;
+}

@@ -1,0 +1,65 @@
+.menu-bar {
+      background-image: url('../../assets/content/menuBar.svg');
+      background-repeat: no-repeat;
+      height: 60px;
+      top: 0;
+      z-index: 20;
+}
+
+.navbar {
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+}
+
+.diagonal-box {
+      position: relative;
+      background-color: transparent;
+}
+
+.diagonal-box::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+      background-image: linear-gradient(45deg, #271033, #642CA9); /*Dark Purple to Rebecca Purple*/
+}
+
+.content {
+      position: relative;
+      z-index: 1;
+      padding: 10px 15px;
+}
+
+.content h1 {
+      color: #F2FDFF; /*Azure X 11 Web Color*/
+}
+
+.fancy-button {
+      background-color: #F2FDFF;
+      font-weight: bold;
+      color: #109648;
+}
+
+.fancy-button i.material-icons {
+      color: #109648;
+      padding-right: 4px;
+}
+
+.cart-item, .shipping-item {
+      width: 100%;
+      min-width: 400px;
+      max-width: 450px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 16px 32px;
+      margin-bottom: 8px;
+      border-radius: 2px;
+      background-color: #F2FDFF;
+}
